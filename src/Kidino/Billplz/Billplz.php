@@ -68,6 +68,7 @@ class Billplz {
         }
 
 		curl_setopt($this->ch, CURLOPT_HEADER, 1);
+		curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($this->ch, CURLOPT_USERPWD, $this->api_key . ":");
 		curl_setopt($this->ch, CURLOPT_TIMEOUT, 30);
 		curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, TRUE);
